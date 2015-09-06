@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+    name="3DConnexion"
+    git="https://github.com/rezaali/Cinder-3DConnexion.git"
+    author="Reza Ali"
+    summary="3DConnexion Space Navigator Wrapper for Cinder 0.9.0+"
+    version="Alpha"
+    url="https://github.com/rezaali/Cinder-3DConnexion">
+    <supports os="macosx" />
+    <headerPattern>src/*.h</headerPattern>
+    <sourcePattern>src/*.cpp</sourcePattern>
+    <platform os="macosx">
+        <framework>lib/3DconnexionClient.framework</framework>
+        <buildCopy destination="Frameworks">lib/3DconnexionClient.framework</buildCopy>
+        <frameworkPath>lib/</frameworkPath>
+    </platform>
+</block>
+</cinder>
