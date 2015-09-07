@@ -2,11 +2,11 @@
 <cinder>
 <block
     name="3DConnexion"
-    git="https://github.com/rezaali/Cinder-3DConnexion.git"
+    git="https://github.com/rezaali/Cinder-Connexion.git"
     author="Reza Ali"
     summary="3DConnexion Space Navigator Wrapper for Cinder 0.9.0+"
     version="Alpha"
-    url="https://github.com/rezaali/Cinder-3DConnexion">
+    url="https://github.com/rezaali/Cinder-Connexion">
     <supports os="macosx" />
     <headerPattern>src/*.h</headerPattern>
     <sourcePattern>src/*.cpp</sourcePattern>
