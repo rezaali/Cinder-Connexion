@@ -26,20 +26,17 @@ ConnexionData::ConnexionData( const ConnexionData& copy )
 
 void Connexion::start()
 {
-    std::cout << "STARTING CONNEXION" << std::endl;
     InstallConnexionHandlers( driverHandler, 0L, 0L );
-    std::string appName = "Concourse";
+    std::string appName = EXECUTABLE_NAME;
     unsigned char* pappName = new unsigned char[ appName.size() + 1 ];
     pappName[0] = ( unsigned char ) appName.size();
     memcpy( &( pappName[ 1 ] ), appName.c_str(), appName.size() );
     sClientID = RegisterConnexionClient( 0, (UInt8*) pappName, kConnexionClientModeTakeOver, kConnexionMaskAll );
-    std::cout << sClientID << std::endl;
     delete [] pappName;
 }
 
 void Connexion::stop()
 {
-    std::cout << "STOPPING CONNEXION" << std::endl;
     UnregisterConnexionClient( sClientID );
     CleanupConnexionHandlers();
 }
